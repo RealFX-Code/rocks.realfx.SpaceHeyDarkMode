@@ -35,7 +35,7 @@ jobs:
         uses: ncipollo/release-action@v1
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         with:
-          artifacts: "rocks.realfx.spaceheydarkmode-${{ steps.time.outputs.time }}.xpi"
+          artifacts: ${{ steps.web-ext-build.outputs.target }}
           makeLatest: "true"
           body:
             "# !! AUTOMATED RELEASE!! \
