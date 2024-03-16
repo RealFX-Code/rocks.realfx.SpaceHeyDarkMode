@@ -33,5 +33,16 @@ jobs:
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
         with:
-          name: target.xpi
+          name: rocks.realfx.spaceheydarkmode-${{ steps.time.outputs.time }}.xpi
           path: ${{ steps.web-ext-build.outputs.target }}
+
+      - name: "Create Release"
+        uses: ncipollo/release-action@v1
+        if: ${{github.ref == 'refs/heads/master'}}
+        with:
+          artifacts: "rocks.realfx.spaceheydarkmode-${{ steps.time.outputs.time }}.xpi"
+          makeLatest: "true"
+          body:
+            "# !! AUTOMATED RELEASE!! \
+            These aren't tested. The extension is built from the source code from the master branch so you can check it out yourself."
+          name: "git-${{ steps.time.outputs.time }}"
