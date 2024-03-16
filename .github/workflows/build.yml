@@ -31,13 +31,6 @@ jobs:
           source: .
           filename: "{name}-{version}-${{ steps.time.outputs.time }}.xpi"
           ignoreFiles: '[ "package.json","package-lock.json","yarn.lock" ]'
-
-      - name: "Upload Artifact"
-        uses: actions/upload-artifact@v3
-        with:
-          name: rocks.realfx.spaceheydarkmode-${{ steps.time.outputs.time }}.xpi
-          path: ${{ steps.web-ext-build.outputs.target }}
-
       - name: "Create Release"
         uses: ncipollo/release-action@v1
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
@@ -48,3 +41,9 @@ jobs:
             "# !! AUTOMATED RELEASE!! \
             These aren't tested. The extension is built from the source code from the master branch so you can check it out yourself."
           name: "git-${{ steps.time.outputs.time }}"
+  
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v3
+        with:
+          name: rocks.realfx.spaceheydarkmode-${{ steps.time.outputs.time }}.xpi
+          path: ${{ steps.web-ext-build.outputs.target }}
