@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "SpaceHey Dark Mode",
+    "version": "1.0",
+    "description": "SpaceHey dark mode extension for firefox",
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.spacehey.com/*"
+            ],
+            "js": [
+                "src/payload.js"
+            ]
+        }
+    ]
+}
