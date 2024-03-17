@@ -6,6 +6,11 @@
     "icons": {
         "48": "icons/border-48.png"
     },
+    "browser_specific_settings" : {
+        "gecko": {
+            "id": "rocks.realfx.SpaceHeyDarkMode"
+        }
+    },
     "content_scripts": [
         {
             "matches": [
