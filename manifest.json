@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "SpaceHey Dark Mode",
-    "version": "9999",
+    "version": "17107.05640",
     "description": "SpaceHey dark mode extension for firefox",
     "icons": {
         "64": "src/assets/icon-64.png"
