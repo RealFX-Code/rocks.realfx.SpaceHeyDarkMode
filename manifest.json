@@ -4,7 +4,7 @@
     "version": "9999",
     "description": "SpaceHey dark mode extension for firefox",
     "icons": {
-        "48": "src/assets/icon-64.png"
+        "64": "src/assets/icon-64.png"
     },
     "browser_specific_settings" : {
         "gecko": {
