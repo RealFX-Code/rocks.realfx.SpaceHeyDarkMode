@@ -8,7 +8,7 @@
     },
     "browser_specific_settings" : {
         "gecko": {
-            "id": "rocks.realfx.SpaceHeyDarkMode"
+            "id": "SpaceHeyDarkMode@realfx.rocks"
         }
     },
     "content_scripts": [
