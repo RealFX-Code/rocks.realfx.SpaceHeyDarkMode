@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
     "name": "SpaceHey Dark Mode",
-    "version": "git",
+    "version": "9999",
     "description": "SpaceHey dark mode extension for firefox",
     "icons": {
-        "48": "icons/border-48.png"
+        "48": "src/assets/icon-64.png"
     },
     "browser_specific_settings" : {
         "gecko": {
