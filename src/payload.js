@@ -5,6 +5,7 @@
     // Don't trigger on profiles
     if (window.location.pathname == "/profile") {
         console.info("Skipping CSS injection on profile.");
+        document.body.style = "display:block;";
         return;
     }
 
